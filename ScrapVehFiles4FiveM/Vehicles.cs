@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace ScrapVehFiles4FiveM
 {
+    /**
+    * Structure of the data file format
+    */
     struct DataFileFormat
     {
         public readonly string Handling = "HANDLING_FILE";
@@ -19,6 +22,9 @@ namespace ScrapVehFiles4FiveM
         }
     }
 
+    /**
+    * Class to parse the vehicles files and generate a FiveM package
+    */
     public class Vehicles
     {
         private string _package;
@@ -34,11 +40,19 @@ namespace ScrapVehFiles4FiveM
 
         private string[] _stream;
 
+        /**
+        * Constructor
+        * @param inPackage Path to the package
+        */
         public Vehicles(string inPackage)
         {
             _package = inPackage;
         }
 
+        /**
+        * Search for the files in the package
+        * @return bool True if the package exists, false otherwise
+        */
         public bool SearchFilesInPackage()
         {
             if (! Directory.Exists(_package) && ! File.Exists(_package))
@@ -99,12 +113,30 @@ namespace ScrapVehFiles4FiveM
             return true;
         }
 
+        /**
+        * Generate the out package
+        */
         public void GeneratePackage()
         {
             string outPackage = Path.GetFileNameWithoutExtension(_package) + "_out";
             Directory.CreateDirectory(outPackage);
 
             // Copy the files
+            CopyFiles(outPackage);
+
+            // Copy the stream files
+            CopyStreamFiles(outPackage);
+
+            // Write the fxmanifest
+            WriteFxManifest(outPackage);
+        }
+
+        /**
+        * Copy the files (Lua and Meta) to the out package
+        * @param outPackage Path to the out package
+        */
+        private void CopyFiles(string outPackage)
+        {
             if (! String.IsNullOrEmpty(_handlingMeta))
             {
                 File.Copy(_handlingMeta, Path.Combine(outPackage, "handling.meta"));
@@ -133,15 +165,27 @@ namespace ScrapVehFiles4FiveM
             {
                 File.Copy(_vehicleNamesLua, Path.Combine(outPackage, "vehicle_names.lua"));
             }
+        }
 
-            // Copy the stream files
+        /**
+        * Copy the stream files (ytd and yft) to the out package
+        * @param outPackage Path to the out package
+        */
+        private void CopyStreamFiles(string outPackage)
+        {
             Directory.CreateDirectory(Path.Combine(outPackage, "stream"));
             foreach (string file in _stream)
             {
                 File.Copy(file, Path.Combine(outPackage, "stream", Path.GetFileName(file)));
             }
+        }
 
-            // Write FxManifest
+        /**
+        * Write the FxManinest to the out package
+        * @param outPackage Path to the out package
+        */
+        private void WriteFxManifest(string outPackage)
+        {
             DataFileFormat dataFileFormat = new DataFileFormat();
             string fxManifest = Path.Combine(outPackage, "fxmanifest.lua");
             using (StreamWriter sw = new StreamWriter(fxManifest))
