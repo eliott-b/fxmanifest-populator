@@ -22,7 +22,7 @@ namespace FxManifestPopulator
             { "VEHICLE_METADATA_FILE", "vehicles.meta" },
             { "CARCOLS_FILE", "carcols.meta" },
             { "VEHICLE_VARIATION_FILE", "carvariations.meta" },
-            { "DLCTEXT_METADATA_FILE", "dlctxt.meta" },
+            { "DLCTEXT_METADATA_FILE", "dlctext.meta" },
             { "AMBIENT_PED_MODEL_SET_FILE", "ambientpedmodelsets.meta" },
             { "PED_METADATA_FILE", "peds.meta" },
             { "VEHICLE_MODEL_SET_FILE", "vehiclemodelsets.meta" }
