@@ -11,7 +11,7 @@
     <AssemblyTitle>A tool to populate fxmanifest files with metadata from the project file.</AssemblyTitle>
     <Product>FxManifest Populator</Product>
     <Author>Eliott B</Author>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Copyright>Copyright (c) 2026 Eliott B</Copyright>
   </PropertyGroup>
 
