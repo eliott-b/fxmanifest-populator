@@ -20,7 +20,7 @@ namespace FxManifestPopulator
         private static readonly Dictionary<string, string> _dataTypeToDataFileName = new()
         {
             { "HANDLING_FILE","handling.meta" },
-            { "VEHICLE_LAYOUTS_FILE", "data/vehiclelayouts.meta" },
+            { "VEHICLE_LAYOUTS_FILE", "vehiclelayouts.meta" },
             { "VEHICLE_METADATA_FILE", "vehicles.meta" },
             { "CARCOLS_FILE", "carcols.meta" },
             { "VEHICLE_VARIATION_FILE", "carvariations.meta" },
@@ -70,7 +70,7 @@ namespace FxManifestPopulator
                     if (metaFile != null)
                     {
                         string relativePath = Path.GetRelativePath(resourceDirectory, metaFile).Replace("\\", "/");
-                        fxManifestContent.Add($"{dataFileType} '{relativePath}'");
+                        fxManifestContent.Add($"data_file '{dataFileType}' '{relativePath}'");
                     }
                 }
             }
