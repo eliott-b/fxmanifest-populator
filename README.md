@@ -23,6 +23,7 @@ Your data files must be named according to the following table for the tool to r
 | `DLCTEXT_METADATA_FILE`      | `dlctext.meta`             |
 | `HANDLING_FILE`              | `handling.meta`            |
 | `PED_METADATA_FILE`          | `peds.meta`                |
+| `VEHICLE_LAYOUTS_FILE`       | `data/vehiclelayouts.meta` |
 | `VEHICLE_METADATA_FILE`      | `vehicles.meta`            |
 | `VEHICLE_MODEL_SET_FILE`     | `vehiclemodelsets.meta`    |
 | `VEHICLE_VARIATION_FILE`     | `vehiclevariations.meta`   |

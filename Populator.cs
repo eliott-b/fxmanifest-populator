@@ -8,6 +8,7 @@ namespace FxManifestPopulator
         private static readonly List<string> _dataFileTypes =
         [
             "HANDLING_FILE",
+            "VEHICLE_LAYOUTS_FILE",
             "VEHICLE_METADATA_FILE",
             "CARCOLS_FILE",
             "VEHICLE_VARIATION_FILE",
@@ -19,6 +20,7 @@ namespace FxManifestPopulator
         private static readonly Dictionary<string, string> _dataTypeToDataFileName = new()
         {
             { "HANDLING_FILE","handling.meta" },
+            { "VEHICLE_LAYOUTS_FILE", "data/vehiclelayouts.meta" },
             { "VEHICLE_METADATA_FILE", "vehicles.meta" },
             { "CARCOLS_FILE", "carcols.meta" },
             { "VEHICLE_VARIATION_FILE", "carvariations.meta" },
