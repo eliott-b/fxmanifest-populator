@@ -14,6 +14,19 @@ Download the latest release from the [Releases](https://github.com/eliott-b/fxma
 fxmanifest-populator.exe <resource_directory>
 ```
 
+Your data files must be named according to the following table for the tool to recognize and include them in the generated fxmanifest file:
+
+| Datafile Type                | Required Name(s)           |
+| ---------------------------- | -------------------------- |
+| `AMBIENT_PED_MODEL_SET_FILE` | `ambientpedmodelsets.meta` |
+| `CARCOLS_FILE`               | `carcols.meta`             |
+| `DLCTEXT_METADATA_FILE`      | `dlctext.meta`             |
+| `HANDLING_FILE`              | `handling.meta`            |
+| `PED_METADATA_FILE`          | `peds.meta`                |
+| `VEHICLE_METADATA_FILE`      | `vehicles.meta`            |
+| `VEHICLE_MODEL_SET_FILE`     | `vehiclemodelsets.meta`    |
+| `VEHICLE_VARIATION_FILE`     | `vehiclevariations.meta`   |
+
 ## License
 
 This project is under the GNU GPL-3.0 License. See the [LICENSE](./LICENSE) file for more details.
