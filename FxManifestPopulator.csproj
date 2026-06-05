@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <AssemblyName>fxmanifest-populator</AssemblyName>
+    <RootNamespace>FxManifestPopulator</RootNamespace>
+    <AssemblyTitle>A tool to populate fxmanifest files with metadata from the project file.</AssemblyTitle>
+    <Product>FxManifest Populator</Product>
+    <Author>Eliott B</Author>
+    <Version>1.0.0</Version>
+    <Copyright>Copyright (c) 2026 Eliott B</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="fxmanifest-template.lua">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  
+</Project>
