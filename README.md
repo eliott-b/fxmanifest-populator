@@ -2,7 +2,9 @@
 
 ## Description
 
-FxManifest Populator is a tool designed to automate the process of populating fxmanifest files with metadata. It scans the specified resource directory for relevant files and generates a comprehensive fxmanifest file that includes all necessary metadata.
+FxManifest Populator is a tool designed to automate the process of populating fxmanifest files with metadata. It scans the specified resource directory for relevant files and generates a comprehensive fxmanifest file that includes all necessary metadata. It can be used on map resources, vehicle packs, or any other resource that requires an fxmanifest file with metadata.
+
+You can use it for your LUA scripts but you will need to add your LUA files manually to the generated fxmanifest file.
 
 ## How to install
 
@@ -27,6 +29,10 @@ Your data files must be named according to the following table for the tool to r
 | `VEHICLE_METADATA_FILE`      | `vehicles.meta`            |
 | `VEHICLE_MODEL_SET_FILE`     | `vehiclemodelsets.meta`    |
 | `VEHICLE_VARIATION_FILE`     | `vehiclevariations.meta`   |
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions or improvements, please feel free to submit a pull request or open an issue on the GitHub repository.
 
 ## License
 
